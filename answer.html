@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>正解ページ</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        input[type="text"] {
+            padding: 8px;
+        }
+        input[type="submit"] {
+            padding: 8px 20px;
+        }
+        .images {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function checkExtraAnswer() {
+            var extraAnswer = document.getElementById("extraAnswerInput").value;
+            if (extraAnswer.trim().toLowerCase() === "おとくい") {
+                window.location.href = "final.html";
+            } else {
+                alert("間違いです");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>東京タワー開業４５周年記念謎、正解おめでとうございます！！</h1>
+        <p>以下はエクストラ問題です、もし良ければ挑戦してみてください！</p>
+        <div class="images">
+            <!-- 画像挿入 -->
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <img src="image4.jpg" alt="Image 4">
+        </div>
+        <p>答えを入力してください</p>
+        <form onsubmit="checkExtraAnswer(); return false;">
+            <input type="text" id="extraAnswerInput" required>
+            <input type="submit" value="チェック">
+        </form>
+    </div>
+</body>
+</html>

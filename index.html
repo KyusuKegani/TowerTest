@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>謎解きページ</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        input[type="text"] {
+            padding: 8px;
+        }
+        input[type="submit"] {
+            padding: 8px 20px;
+        }
+    </style>
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answerInput").value;
+            if (answer.trim().toLowerCase() === "ことぶき") {
+                window.location.href = "answer.html";
+            } else {
+                alert("間違いです");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>謎解き正誤判定ページ</h1>
+        <p>答えを入力してください</p>
+        <form onsubmit="checkAnswer(); return false;">
+            <input type="text" id="answerInput" required>
+            <input type="submit" value="チェック">
+        </form>
+    </div>
+</body>
+</html>
